@@ -20,10 +20,14 @@ if(m < 10){m = "0" + (time.getMonth()+1)}
 if(d < 10){d = "0" + time.getDate()}
 var Nowtime = "" + time.getFullYear() + m + d
 
-function Login(){
+function btnEvent(){
     var userId = document.getElementById('userId').value
     var code = document.getElementById('Code').value
     var version = document.getElementById('Version').value
+    Login(userId,code,version)
+}
+
+function Login(userId,code,version){
     database.ref('ServerOnline').once("value").then(function(snapshot){
         var val = snapshot.val()
         if(val == 1){
