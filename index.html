@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <form>
+            <label for="Version">Version</label><br>
+            <input type="text" name="Version" id="Version" oninput="value=value.replace(/[^\-?\d.]/g,'')"><br>
+            <label for="userId">User</label><br>
+            <input type="text" name="userId" id="userId" oninput="value=value.replace(/[^\w\/]/ig,'')"><br>
+            <label for="Code">Code</label><br>
+            <input type="text" name="Code" id ="Code" oninput="value=value.replace(/[^\w\/]/ig,'')"><br>
+            <button id="LoginBtn" type = "button" class="btn waves-effect waves-light" onclick="Login()">Login</button><br>
+            <label for="LoginCheck" id="LoginCheck" style="color: red;"></label>
+        </form>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="main.js"></script>
+</body>
+</html>
